@@ -1,0 +1,21 @@
+﻿<Window x:Class="FinalZiangWang.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalZiangWang"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas>
+        <Button x:Name="btnGetProduct" Content="Get All Product" Canvas.Left="47" Canvas.Top="47" Height="43" Width="111" Click="btnGetProduct_Click"/>
+        <Button x:Name="btnCleandata" Content="CLear Data" Canvas.Left="207" Canvas.Top="47" Height="43" Width="104" Click="btnCleandata_Click"/>
+        <Label Content="Get Product by Category&#xD;&#xA;&#xD;&#xA;" Canvas.Left="47" Canvas.Top="117" Width="235" Height="44" FontSize="18" FontWeight="Bold"/>
+        <ComboBox x:Name="comboCat" Canvas.Left="47" Canvas.Top="166" Width="264" Height="37" Text="combobox" FontSize="18" SelectionChanged="comboCat_SelectionChanged"/>
+        <Label Content="Search Product by Name" Canvas.Left="47" Canvas.Top="228" Width="235" Height="44" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="txtPname" Canvas.Left="47" TextWrapping="Wrap" Canvas.Top="277" Width="132" Height="26" FontSize="16"/>
+        <Button x:Name="btnSearch" Content="Search" Canvas.Left="217" Canvas.Top="277" Width="94" Height="26" Click="btnSearch_Click"/>
+        <Button x:Name="btnAdd" Content="Add New Product" Height="38" Canvas.Left="47" Canvas.Top="348" Width="264" Click="btnAdd_Click"/>
+        <DataGrid x:Name="grdDisplay" Height="339" Width="411" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="351" Canvas.Top="47" SelectionChanged="DataGrid_SelectionChanged"/>
+
+    </Canvas>
+</Window>
